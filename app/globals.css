@@ -799,20 +799,45 @@ button.print-btn:hover { background: var(--accent-light); }
     print-color-adjust: exact;
   }
 
-  /* ── Avoid breaks inside content blocks ── */
-  .day-card            { page-break-inside: avoid; border: 1pt solid #bbb; }
-  .short-answer-block  { page-break-inside: avoid; }
-  .verse-box           { page-break-inside: avoid; }
-  .memory-verse        { page-break-inside: avoid; }
-  .sidebar-box         { page-break-inside: avoid; }
-  .vocab-card          { page-break-inside: avoid; }
-  .quiz-block          { page-break-inside: avoid; }
-  .map-box-wrapper     { page-break-inside: avoid; }
-  .no-break            { page-break-inside: avoid; }
+  /* ── Day cards: allow breaks inside (they're too big to avoid) ── */
+  /* but keep the header glued to first child */
+  .day-card           { border: 1pt solid #bbb; page-break-inside: auto; break-inside: auto; }
+  .day-card .dc-header { break-after: avoid; page-break-after: avoid; }
 
-  /* Keep chapter header glued to the first content below it */
-  .chapter-banner + *,
-  .week-banner + * { break-before: avoid; }
+  /* ── Small blocks — stay together ── */
+  .short-answer-block { break-inside: avoid; page-break-inside: avoid; }
+  .verse-box          { break-inside: avoid; page-break-inside: avoid; }
+  .memory-verse       { break-inside: avoid; page-break-inside: avoid; }
+  .sidebar-box        { break-inside: avoid; page-break-inside: avoid; }
+  .vocab-card         { break-inside: avoid; page-break-inside: avoid; }
+  .quiz-block         { break-inside: avoid; page-break-inside: avoid; }
+  .map-box-wrapper    { break-inside: avoid; page-break-inside: avoid; }
+  .no-break           { break-inside: avoid; page-break-inside: avoid; }
+
+  /* Chapter/week banners stay glued to what follows */
+  .chapter-banner     { break-after: avoid; page-break-after: avoid; }
+  .week-banner        { break-after: avoid; page-break-after: avoid; }
+  .chapter-banner + * { break-before: avoid; page-break-before: avoid; }
+  .week-banner + *    { break-before: avoid; page-break-before: avoid; }
+
+  /* ── Tighten spacing in print so blocks fit better on pages ── */
+  .short-answer-block {
+    margin: 0.5rem 0 0.65rem;
+  }
+  .ruled-line {
+    height: 20pt;
+    margin: 1pt 0;
+  }
+  .verse-box, .sidebar-box, .memory-verse {
+    margin: 0.75rem 0;
+  }
+  .day-card {
+    padding: 0.75rem;
+    margin: 0.75rem 0;
+  }
+  h2 { font-size: 14pt; }
+  h3 { font-size: 12pt; }
+  p, li { font-size: 11pt; }
 
   /* ── Section rule ── */
   .section-rule { border-top: 1pt solid #c8932a; margin: 1.5rem 0; }

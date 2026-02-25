@@ -65,8 +65,10 @@ export default function WorkbookPage() {
       <ShortAnswer question="1. In what year did Germany occupy Belgium? Who was the head of Nazi Germany?" lines={2} />
       <ShortAnswer question="2. What does 'occupation' mean? How might living under occupation change daily life for ordinary Belgian citizens?" />
       <ShortAnswer question="3. Look at the timeline above. How long did the German occupation of Belgium last before it was liberated?" lines={2} />
-      <ShortAnswer question="4. Arms of Deliverance is set in Belgium, England, France, and Germany. Place these countries on the map below and label their capitals." />
-      <MapBox label="Europe, 1944 — Draw and label: Belgium, England, France, Germany" height="280px" />
+      <div className="no-break">
+        <ShortAnswer question="4. Arms of Deliverance is set in Belgium, England, France, and Germany. Place these countries on the map below and label their capitals." lines={1} />
+        <MapBox label="Europe, 1944 — Draw and label: Belgium, England, France, Germany" height="280px" />
+      </div>
 
       <SectionRule />
 
@@ -185,8 +187,10 @@ export default function WorkbookPage() {
       <SectionRule />
 
       <ChapterBanner chapter="Unit 5 Lab" title="B-17 Crew Positions — Diagram and Label" />
-      <MapBox label="Draw a side-view diagram of a B-17 Flying Fortress. Label these positions: Pilot / Co-Pilot / Navigator / Bombardier (Nose) / Radio Operator / Ball Turret Gunner / Waist Gunners (2) / Tail Gunner / Top Turret Gunner" height="250px" />
-      <ShortAnswer question="Which position would you have chosen, and why? Which position do you think was most dangerous? Support your answer with details from the novel." />
+      <div className="no-break">
+        <MapBox label="Draw a side-view diagram of a B-17 Flying Fortress. Label these positions: Pilot / Co-Pilot / Navigator / Bombardier (Nose) / Radio Operator / Ball Turret Gunner / Waist Gunners (2) / Tail Gunner / Top Turret Gunner" height="250px" />
+        <ShortAnswer question="Which position would you have chosen, and why? Which position do you think was most dangerous? Support your answer with details from the novel." />
+      </div>
 
       <SectionRule />
 
@@ -249,8 +253,10 @@ export default function WorkbookPage() {
       <ShortAnswer question="2. Eddie and Mary are stopped by German feldgendarmerie (military police) on the road to Verviers while carrying baby Samuel and speaking German. (Ch. 26) How does the Battle of the Bulge make this encounter both more dangerous and more believable?" />
       <ShortAnswer question="3. In Chapter 28, Eddie and Mary break through American lines at St. Vith. Describe the scene — what is happening at the town, and how do they get inside?" />
       <ShortAnswer question="4. What intelligence about German troop movements does Mary gather from the soldiers on the truck in Chapter 26? How does she pass this information on?" />
-      <ShortAnswer question="5. Lee drives 30 miles under artillery fire to reach St. Vith. What does this scene reveal about how she has changed from the society reporter who first appeared in Chapter 4?" />
-      <MapBox label="Sketch the Battle of the Bulge — mark: Belgium, the Ardennes Forest, St. Vith, Bastogne, and the direction of the German advance" height="250px" />
+      <div className="no-break">
+        <ShortAnswer question="5. Lee drives 30 miles under artillery fire to reach St. Vith. What does this scene reveal about how she has changed from the society reporter who first appeared in Chapter 4?" />
+        <MapBox label="Sketch the Battle of the Bulge — mark: Belgium, the Ardennes Forest, St. Vith, Bastogne, and the direction of the German advance" height="250px" />
+      </div>
 
       <SectionRule />
 
@@ -337,8 +343,10 @@ export default function WorkbookPage() {
 
       <ShortAnswer question="1. List, in order, the major locations where the story takes place. Begin with New York and Brussels in Chapter 1." lines={4} />
       <ShortAnswer question="2. Why was Bassingbourn, England chosen as the base for the 91st Bomb Group? What geographic advantage did England provide for bombing missions into Europe?" />
-      <ShortAnswer question="3. The Wegimont castle is described as having four towers, a moat, and a courtyard. It is located near Liège, Belgium. Look at a map — how far is Liège from the German border? Why was this significant during the Battle of the Bulge?" />
-      <MapBox label="Trace the journey of Eddie and Mary after their bailout: landing in Belgium → Roger's farm → Wegimont castle → road to Verviers → Verviers church → American lines at St. Vith" height="280px" />
+      <div className="no-break">
+        <ShortAnswer question="3. The Wegimont castle is described as having four towers, a moat, and a courtyard. It is located near Liège, Belgium. Look at a map — how far is Liège from the German border? Why was this significant during the Battle of the Bulge?" />
+        <MapBox label="Trace the journey of Eddie and Mary after their bailout: landing in Belgium → Roger's farm → Wegimont castle → road to Verviers → Verviers church → American lines at St. Vith" height="280px" />
+      </div>
       <ShortAnswer question="4. What mountain range do the Comet Line escape routes use to cross from France into Spain? Why was it chosen as an escape route?" lines={2} />
 
       <SectionRule />
