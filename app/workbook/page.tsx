@@ -1,6 +1,5 @@
 ﻿import CoverPage from "@/components/workbook/CoverPage";
 import ChapterBanner from "@/components/workbook/ChapterBanner";
-import PageBreak from "@/components/workbook/PageBreak";
 import ShortAnswer from "@/components/workbook/ShortAnswer";
 import EssayBox from "@/components/workbook/EssayBox";
 import JournalPrompt from "@/components/workbook/JournalPrompt";
@@ -31,6 +30,7 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 1 — THE WORLD IN 1944 */}
       {/* ======================================================= */}
+      <section className="print-unit">
       <ChapterBanner chapter="Unit 1" title="The World in 1944 — Europe at War" />
 
       <VocabGrid>
@@ -74,7 +74,9 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 2 — BELGIUM UNDER OCCUPATION */}
       {/* ======================================================= */}
-      <PageBreak />
+      </section>
+
+      <section className="print-unit">
       <ChapterBanner chapter="Unit 2" title="Belgium Under the Nazi Occupation" />
 
       <VerseBox
@@ -94,7 +96,9 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 3 — THE LEBENSBORN PROGRAM */}
       {/* ======================================================= */}
-      <PageBreak />
+      </section>
+
+      <section className="print-unit">
       <ChapterBanner chapter="Unit 3" title="The Lebensborn Program — A History of Eugenics" />
 
       <SidebarBox title="What Was Lebensborn?">
@@ -131,8 +135,9 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 4 — WOMEN WAR CORRESPONDENTS */}
       {/* ======================================================= */}
-      <PageBreak />
-      <PageBreak />
+      </section>
+
+      <section className="print-unit">
       <ChapterBanner chapter="Unit 4" title="Women on the Front Lines — War Correspondents in WWII" />
 
       <SidebarBox title="Women War Correspondents — Historical Facts">
@@ -156,7 +161,9 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 5 — THE B-17 AND THE 91ST BOMB GROUP */}
       {/* ======================================================= */}
-      <PageBreak />
+      </section>
+
+      <section className="print-unit">
       <ChapterBanner chapter="Unit 5" title="The B-17 Flying Fortress and the 91st Bomb Group" />
 
       <SidebarBox title="The 91st Bomb Group — The Ragged Irregulars">
@@ -190,7 +197,9 @@ export default function WorkbookPage() {
 
       <SectionRule />
 
-      <PageBreak />
+      </section>
+
+      <section className="print-unit">
       <ChapterBanner chapter="Unit 5 Lab" title="B-17 Crew Positions — Diagram and Label" />
       <div className="no-break">
         <MapBox label="Draw a side-view diagram of a B-17 Flying Fortress. Label these positions: Pilot / Co-Pilot / Navigator / Bombardier (Nose) / Radio Operator / Ball Turret Gunner / Waist Gunners (2) / Tail Gunner / Top Turret Gunner" height="250px" />
@@ -202,8 +211,9 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 6 — THE COMET LINE ESCAPE NETWORK */}
       {/* ======================================================= */}
-      <PageBreak />
-      <PageBreak />
+      </section>
+
+      <section className="print-unit">
       <ChapterBanner chapter="Unit 6" title="The Comet Line — Belgium's Secret Escape Network" />
 
       <SidebarBox title="The Comet Line — Historical Facts">
@@ -240,7 +250,9 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 7 — THE BATTLE OF THE BULGE */}
       {/* ======================================================= */}
-      <PageBreak />
+      </section>
+
+      <section className="print-unit">
       <ChapterBanner chapter="Unit 7" title="The Battle of the Bulge — Germany's Last Gamble" />
 
       <SidebarBox title="Battle of the Bulge — Key Facts">
@@ -269,8 +281,9 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 8 — LIBERATION AND BUCHENWALD */}
       {/* ======================================================= */}
-      <PageBreak />
-      <PageBreak />
+      </section>
+
+      <section className="print-unit">
       <ChapterBanner chapter="Unit 8" title="Liberation — Weimar, Patton's Army, and Buchenwald" />
 
       <SidebarBox title="Buchenwald Concentration Camp">
@@ -298,8 +311,9 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 9 — CHARACTER STUDY */}
       {/* ======================================================= */}
-      <PageBreak />
-      <PageBreak />
+      </section>
+
+      <section className="print-unit">
       <ChapterBanner chapter="Unit 9" title="Character Study — Five Portraits of Faith and Fear" />
 
       <SidebarBox title="Character Overview">
@@ -321,8 +335,9 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 10 — FAITH IN THE NOVEL */}
       {/* ======================================================= */}
-      <PageBreak />
-      <PageBreak />
+      </section>
+
+      <section className="print-unit">
       <ChapterBanner chapter="Unit 10" title="Faith in the Novel — Scripture, Prayer, and Spiritual Turning Points" />
 
       <SidebarBox title="Scripture Referenced in the Novel">
@@ -351,7 +366,9 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 11 — GEOGRAPHY AND TRAVEL */}
       {/* ======================================================= */}
-      <PageBreak />
+      </section>
+
+      <section className="print-unit">
       <ChapterBanner chapter="Unit 11" title="Geography — Tracing the Journey" />
 
       <ShortAnswer question="1. List, in order, the major locations where the story takes place. Begin with New York and Brussels in Chapter 1." lines={4} />
@@ -365,8 +382,9 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 12 — FINAL PROJECTS */}
       {/* ======================================================= */}
-      <PageBreak />
-      <PageBreak />
+      </section>
+
+      <section className="print-unit">
       <ChapterBanner chapter="Unit 12" title="Final Projects — Choose One" />
 
       <EssayBox
@@ -383,6 +401,7 @@ export default function WorkbookPage() {
         prompt="PROJECT C — COMPARATIVE HISTORY: Compare the role of women in World War II using two of the following: (1) Lee O'Donnelly and Mary Kelley as war correspondents; (2) Real correspondent Martha Gellhorn who landed at Normandy on D-Day; (3) Violette Szabo, British SOE agent executed in 1945; (4) Andrée de Jongh, Belgian founder of the Comet Line. Write a 4-6 page essay. Use at least 3 outside sources."
         lines={20}
       />
+      </section>
 
     </div>
   );

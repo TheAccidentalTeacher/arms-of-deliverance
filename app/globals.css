@@ -779,19 +779,32 @@ button.print-btn:hover { background: var(--accent-light); }
     min-height: 0;
   }
 
-  /* ── Every unit/week banner starts on a fresh page ── */
-  .chapter-banner {
+  /* ── Each unit/week section starts on a fresh page (except the first) ─── */
+  /* Using section.print-unit as a reliable block-level page break anchor.  */
+  /* Chrome honours page-break-before:always on non-empty block containers. */
+  section.print-unit {
+    display: block;
+    page-break-before: always;
     break-before: page;
-    break-after: avoid;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+  }
+  section.print-unit:first-of-type {
+    page-break-before: auto;
+    break-before: auto;
+  }
+
+  /* ── Banners: glue to first content below, no extra breaks ── */
+  .chapter-banner {
+    break-after: avoid; page-break-after: avoid;
+    break-before: avoid; page-break-before: avoid;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
   }
   .week-banner {
-    break-before: page;
-    break-after: avoid;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+    break-after: avoid; page-break-after: avoid;
+    break-before: avoid; page-break-before: avoid;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
   }
+  .chapter-banner + * { break-before: avoid; page-break-before: avoid; }
+  .week-banner + *    { break-before: avoid; page-break-before: avoid; }
 
   /* ── Keep colour blocks accurate ── */
   .verse-box, .memory-verse, .sidebar-box, .journal-prompt {
@@ -804,8 +817,7 @@ button.print-btn:hover { background: var(--accent-light); }
   }
 
   /* ── Day cards: allow breaks inside (they're too big to avoid) ── */
-  /* but keep the header glued to first child */
-  .day-card           { border: 1pt solid #bbb; page-break-inside: auto; break-inside: auto; }
+  .day-card            { border: 1pt solid #bbb; page-break-inside: auto; break-inside: auto; }
   .day-card .dc-header { break-after: avoid; page-break-after: avoid; }
 
   /* ── Small blocks — stay together ── */
@@ -817,22 +829,6 @@ button.print-btn:hover { background: var(--accent-light); }
   .quiz-block         { break-inside: avoid; page-break-inside: avoid; }
   .map-box-wrapper    { break-inside: avoid; page-break-inside: avoid; }
   .no-break           { break-inside: avoid; page-break-inside: avoid; }
-
-  /* ── Explicit page break (PageBreak component) ── */
-  .page-break {
-    display: block;
-    break-before: page;
-    page-break-before: always;
-    height: 0;
-  }
-
-  /* Banners stay glued to the first content below — no forced break */
-  .chapter-banner     { break-after: avoid; page-break-after: avoid;
-                        break-before: avoid; page-break-before: avoid; }
-  .week-banner        { break-after: avoid; page-break-after: avoid;
-                        break-before: avoid; page-break-before: avoid; }
-  .chapter-banner + * { break-before: avoid; page-break-before: avoid; }
-  .week-banner + *    { break-before: avoid; page-break-before: avoid; }
 
   /* ── Cap map height in print so Q+map combos fit on a page ── */
   .map-box {
