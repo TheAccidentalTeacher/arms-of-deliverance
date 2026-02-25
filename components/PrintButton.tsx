@@ -6,8 +6,9 @@ export default function PrintButton() {
       <button className="print-btn" onClick={() => window.print()}>
         🖨 Print / Save as PDF
       </button>
-      <span style={{ fontSize: "0.85rem", color: "var(--ink-soft)", fontFamily: "system-ui, sans-serif" }}>
-        Use your browser&rsquo;s Print dialog — select &ldquo;Save as PDF&rdquo; for a digital copy.
+      <span style={{ fontSize: "0.82rem", color: "var(--ink-soft)", fontFamily: "system-ui, sans-serif", lineHeight: 1.5 }}>
+        For professional formatting: in the Print dialog, set <strong>Headers and footers</strong> to{" "}
+        <strong>None</strong> (or <em>Off</em>) — page numbers are built in.
       </span>
     </div>
   );

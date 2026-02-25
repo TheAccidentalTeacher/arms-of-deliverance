@@ -503,20 +503,22 @@ button.print-btn:hover { background: var(--accent-light); }
 }
 
 /* ── Map Box ──────────────────────────────────────── */
+.map-box-wrapper {
+  margin: 1rem 0;
+}
+.map-box-label {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0 0 0.4rem;
+  font-family: var(--font-sans);
+}
 .map-box {
   border: 2px dashed #999;
   border-radius: 6px;
   background: #f0f0ee;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem 0;
-  color: #777;
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  font-style: italic;
-  text-align: center;
-  padding: 1rem;
+  min-height: 240px;
+  margin: 0;
 }
 
 /* ── Tables ───────────────────────────────────────── */
@@ -752,30 +754,99 @@ button.print-btn:hover { background: var(--accent-light); }
    PRINT STYLES
    ══════════════════════════════════════════════════════ */
 @media print {
+  /* ── Hide screen-only chrome ── */
   nav.site-nav,
   .print-button-bar,
   .no-print { display: none !important; }
 
-  body { background: white; font-size: 11pt; }
+  /* ── Base ── */
+  body { background: white; font-size: 11pt; line-height: 1.6; }
 
-  .workbook-body { max-width: 100%; padding: 0; }
+  .workbook-body,
+  .page-root { max-width: 100%; padding: 0; }
 
-  .cover-page { page-break-after: always; border: 3px double #8b1a1a; }
+  /* ── Hide home page content ── */
+  .home-card, .home-hero, footer { display: none; }
 
-  .week-banner, .chapter-banner { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .verse-box, .memory-verse, .sidebar-box, .journal-prompt { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .quiz-block, .answer-key-block, .vocab-card { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
-  .home-card, .home-hero { display: none; }
+  /* ── Cover page ── */
+  .cover-page {
+    page-break-after: always;
+    border: 3px double #8b1a1a;
+    min-height: 0;
+  }
 
-  .day-card { page-break-inside: avoid; border: 1pt solid #999; }
-  .no-break { page-break-inside: avoid; }
+  /* ── Every unit/week banner starts on a fresh page ── */
+  .chapter-banner {
+    break-before: page;
+    break-after: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .week-banner {
+    break-before: page;
+    break-after: avoid;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 
-  .section-rule { border-top: 1pt solid #c8932a; }
+  /* ── Keep colour blocks accurate ── */
+  .verse-box, .memory-verse, .sidebar-box, .journal-prompt {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .quiz-block, .answer-key-block, .vocab-card, .day-card {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
 
+  /* ── Avoid breaks inside content blocks ── */
+  .day-card            { page-break-inside: avoid; border: 1pt solid #bbb; }
+  .short-answer-block  { page-break-inside: avoid; }
+  .verse-box           { page-break-inside: avoid; }
+  .memory-verse        { page-break-inside: avoid; }
+  .sidebar-box         { page-break-inside: avoid; }
+  .vocab-card          { page-break-inside: avoid; }
+  .quiz-block          { page-break-inside: avoid; }
+  .map-box-wrapper     { page-break-inside: avoid; }
+  .no-break            { page-break-inside: avoid; }
+
+  /* Keep chapter header glued to the first content below it */
+  .chapter-banner + *,
+  .week-banner + * { break-before: avoid; }
+
+  /* ── Section rule ── */
+  .section-rule { border-top: 1pt solid #c8932a; margin: 1.5rem 0; }
+
+  /* ── Links ── */
   a { color: #8b1a1a; text-decoration: none; }
 
+  /* ── Page geometry + running header/footer ── */
   @page {
     size: letter portrait;
-    margin: 0.75in 0.85in;
+    margin: 0.85in 0.85in 0.85in;
+
+    /* Running title — top centre, suppressed on cover (page 1) */
+    @top-center {
+      content: "Arms of Deliverance Learning Series";
+      font-family: Georgia, serif;
+      font-size: 8pt;
+      color: #888;
+      padding-bottom: 4pt;
+      border-bottom: 0.5pt solid #c8932a;
+    }
+
+    /* Word-style page number — bottom centre */
+    @bottom-center {
+      content: counter(page);
+      font-family: Georgia, serif;
+      font-size: 9pt;
+      color: #555;
+    }
+  }
+
+  /* No running header or page number on the cover page */
+  @page :first {
+    @top-center    { content: none; }
+    @bottom-center { content: none; }
   }
 }
