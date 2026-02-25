@@ -120,8 +120,9 @@ button.print-btn {
 }
 button.print-btn:hover { background: var(--accent-light); }
 
-/* ── Workbook Body ────────────────────────────────── */
-.workbook-body {
+/* ── Workbook Body / Page Root ───────────────────── */
+.workbook-body,
+.page-root {
   max-width: 900px;
   margin: 0 auto;
   padding: 1.5rem 2rem;
@@ -466,6 +467,22 @@ button.print-btn:hover { background: var(--accent-light); }
   color: var(--accent);
 }
 
+/* ── Answer List ──────────────────────────────────── */
+.answer-list {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0 0.75rem;
+}
+.answer-list li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+.answer-list li em {
+  color: var(--accent);
+  font-style: normal;
+  font-weight: 700;
+}
+
 /* ── Answer Key Block ─────────────────────────────── */
 .answer-key-block {
   border: 2px dashed var(--green-key);
@@ -539,6 +556,12 @@ button.print-btn:hover { background: var(--accent-light); }
 /* ── No-break utility ─────────────────────────────── */
 .no-break { page-break-inside: avoid; }
 
+/* ── Lesson Text ──────────────────────────────────── */
+.lesson-text {
+  margin: 0.75rem 0;
+  line-height: 1.75;
+}
+
 /* ── Home Page ────────────────────────────────────── */
 .home-hero {
   background: linear-gradient(135deg, var(--ink) 0%, var(--accent) 100%);
@@ -603,6 +626,127 @@ button.print-btn:hover { background: var(--accent-light); }
   border: 1.5px solid var(--accent);
 }
 .home-card .hc-link.secondary:hover { background: var(--accent); color: white; }
+
+/* ══════════════════════════════════════════════════════
+   RESPONSIVE — MOBILE FIRST
+   ══════════════════════════════════════════════════════ */
+
+/* Tablet — reduce side padding */
+@media (max-width: 860px) {
+  .workbook-body,
+  .page-root {
+    padding: 1.25rem 1.5rem;
+  }
+  .home-cards {
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Mobile — 640px and below */
+@media (max-width: 640px) {
+  html { font-size: 15px; }
+
+  h1 { font-size: 1.65rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.1rem; }
+
+  /* ── Nav ── */
+  nav.site-nav {
+    padding: 0.5rem 0.875rem;
+    gap: 0.35rem 0.75rem;
+  }
+  nav.site-nav .nav-title {
+    font-size: 0.85rem;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.15rem;
+  }
+  nav.site-nav a {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.6rem;
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  /* ── Page containers ── */
+  .workbook-body,
+  .page-root {
+    padding: 0.875rem 0.875rem;
+  }
+
+  /* ── Cover page ── */
+  .cover-page {
+    padding: 2rem 1.25rem;
+    min-height: auto;
+    margin: 1rem 0;
+  }
+  .cover-title { font-size: 1.75rem; }
+  .cover-subtitle { font-size: 1rem; }
+
+  /* ── Week / Chapter banners ── */
+  .week-banner {
+    padding: 0.875rem 1rem;
+    margin: 1.5rem 0 1rem;
+  }
+  .week-banner h2 { font-size: 1.2rem; }
+  .chapter-banner { padding: 0.6rem 1rem; }
+
+  /* ── Day card ── */
+  .day-card { padding: 1rem; }
+  .day-card .dc-header { flex-wrap: wrap; gap: 0.4rem; }
+
+  /* ── Home hero ── */
+  .home-hero {
+    padding: 2rem 1.25rem 1.75rem;
+  }
+  .home-hero h1 { font-size: 1.65rem; }
+  .home-hero p { font-size: 0.95rem; }
+
+  /* ── Home cards ── */
+  .home-cards {
+    padding: 1.5rem 0.875rem;
+    gap: 1rem;
+  }
+  .home-card { padding: 1.25rem; }
+  .home-card h2 { font-size: 1.1rem; }
+
+  /* Touch-friendly tap targets */
+  button.print-btn {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.95rem;
+    min-height: 44px;
+  }
+  .hc-link {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 1.1rem;
+  }
+
+  /* ── Vocab grid → single column ── */
+  .vocab-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── Word-break for long answers/definitions ── */
+  .vocab-card,
+  .answer-key-block,
+  .sidebar-box,
+  .verse-box {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* ── Print button bar ── */
+  .print-button-bar { padding: 0.5rem 0.875rem; }
+
+  /* ── Verse / memory verse ── */
+  .verse-box blockquote,
+  .memory-verse blockquote {
+    font-size: 0.95rem;
+  }
+}
 
 /* ══════════════════════════════════════════════════════
    PRINT STYLES
