@@ -1,5 +1,6 @@
 ﻿import CoverPage from "@/components/workbook/CoverPage";
 import ChapterBanner from "@/components/workbook/ChapterBanner";
+import PageBreak from "@/components/workbook/PageBreak";
 import ShortAnswer from "@/components/workbook/ShortAnswer";
 import EssayBox from "@/components/workbook/EssayBox";
 import JournalPrompt from "@/components/workbook/JournalPrompt";
@@ -65,16 +66,15 @@ export default function WorkbookPage() {
       <ShortAnswer question="1. In what year did Germany occupy Belgium? Who was the head of Nazi Germany?" lines={2} />
       <ShortAnswer question="2. What does 'occupation' mean? How might living under occupation change daily life for ordinary Belgian citizens?" />
       <ShortAnswer question="3. Look at the timeline above. How long did the German occupation of Belgium last before it was liberated?" lines={2} />
-      <div className="no-break">
-        <ShortAnswer question="4. Arms of Deliverance is set in Belgium, England, France, and Germany. Place these countries on the map below and label their capitals." lines={1} />
-        <MapBox label="Europe, 1944 — Draw and label: Belgium, England, France, Germany" height="280px" />
-      </div>
+      <ShortAnswer question="4. Arms of Deliverance is set in Belgium, England, France, and Germany. Place these countries on the map below and label their capitals." lines={1} />
+      <MapBox label="Europe, 1944 — Draw and label: Belgium, England, France, Germany" height="280px" />
 
       <SectionRule />
 
       {/* ======================================================= */}
       {/* UNIT 2 — BELGIUM UNDER OCCUPATION */}
       {/* ======================================================= */}
+      <PageBreak />
       <ChapterBanner chapter="Unit 2" title="Belgium Under the Nazi Occupation" />
 
       <VerseBox
@@ -94,6 +94,7 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 3 — THE LEBENSBORN PROGRAM */}
       {/* ======================================================= */}
+      <PageBreak />
       <ChapterBanner chapter="Unit 3" title="The Lebensborn Program — A History of Eugenics" />
 
       <SidebarBox title="What Was Lebensborn?">
@@ -130,6 +131,8 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 4 — WOMEN WAR CORRESPONDENTS */}
       {/* ======================================================= */}
+      <PageBreak />
+      <PageBreak />
       <ChapterBanner chapter="Unit 4" title="Women on the Front Lines — War Correspondents in WWII" />
 
       <SidebarBox title="Women War Correspondents — Historical Facts">
@@ -153,6 +156,7 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 5 — THE B-17 AND THE 91ST BOMB GROUP */}
       {/* ======================================================= */}
+      <PageBreak />
       <ChapterBanner chapter="Unit 5" title="The B-17 Flying Fortress and the 91st Bomb Group" />
 
       <SidebarBox title="The 91st Bomb Group — The Ragged Irregulars">
@@ -186,6 +190,7 @@ export default function WorkbookPage() {
 
       <SectionRule />
 
+      <PageBreak />
       <ChapterBanner chapter="Unit 5 Lab" title="B-17 Crew Positions — Diagram and Label" />
       <div className="no-break">
         <MapBox label="Draw a side-view diagram of a B-17 Flying Fortress. Label these positions: Pilot / Co-Pilot / Navigator / Bombardier (Nose) / Radio Operator / Ball Turret Gunner / Waist Gunners (2) / Tail Gunner / Top Turret Gunner" height="250px" />
@@ -197,6 +202,8 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 6 — THE COMET LINE ESCAPE NETWORK */}
       {/* ======================================================= */}
+      <PageBreak />
+      <PageBreak />
       <ChapterBanner chapter="Unit 6" title="The Comet Line — Belgium's Secret Escape Network" />
 
       <SidebarBox title="The Comet Line — Historical Facts">
@@ -233,6 +240,7 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 7 — THE BATTLE OF THE BULGE */}
       {/* ======================================================= */}
+      <PageBreak />
       <ChapterBanner chapter="Unit 7" title="The Battle of the Bulge — Germany's Last Gamble" />
 
       <SidebarBox title="Battle of the Bulge — Key Facts">
@@ -253,16 +261,16 @@ export default function WorkbookPage() {
       <ShortAnswer question="2. Eddie and Mary are stopped by German feldgendarmerie (military police) on the road to Verviers while carrying baby Samuel and speaking German. (Ch. 26) How does the Battle of the Bulge make this encounter both more dangerous and more believable?" />
       <ShortAnswer question="3. In Chapter 28, Eddie and Mary break through American lines at St. Vith. Describe the scene — what is happening at the town, and how do they get inside?" />
       <ShortAnswer question="4. What intelligence about German troop movements does Mary gather from the soldiers on the truck in Chapter 26? How does she pass this information on?" />
-      <div className="no-break">
-        <ShortAnswer question="5. Lee drives 30 miles under artillery fire to reach St. Vith. What does this scene reveal about how she has changed from the society reporter who first appeared in Chapter 4?" />
-        <MapBox label="Sketch the Battle of the Bulge — mark: Belgium, the Ardennes Forest, St. Vith, Bastogne, and the direction of the German advance" height="250px" />
-      </div>
+      <ShortAnswer question="5. Lee drives 30 miles under artillery fire to reach St. Vith. What does this scene reveal about how she has changed from the society reporter who first appeared in Chapter 4?" />
+      <MapBox label="Sketch the Battle of the Bulge — mark: Belgium, the Ardennes Forest, St. Vith, Bastogne, and the direction of the German advance" height="250px" />
 
       <SectionRule />
 
       {/* ======================================================= */}
       {/* UNIT 8 — LIBERATION AND BUCHENWALD */}
       {/* ======================================================= */}
+      <PageBreak />
+      <PageBreak />
       <ChapterBanner chapter="Unit 8" title="Liberation — Weimar, Patton's Army, and Buchenwald" />
 
       <SidebarBox title="Buchenwald Concentration Camp">
@@ -290,6 +298,8 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 9 — CHARACTER STUDY */}
       {/* ======================================================= */}
+      <PageBreak />
+      <PageBreak />
       <ChapterBanner chapter="Unit 9" title="Character Study — Five Portraits of Faith and Fear" />
 
       <SidebarBox title="Character Overview">
@@ -311,6 +321,8 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 10 — FAITH IN THE NOVEL */}
       {/* ======================================================= */}
+      <PageBreak />
+      <PageBreak />
       <ChapterBanner chapter="Unit 10" title="Faith in the Novel — Scripture, Prayer, and Spiritual Turning Points" />
 
       <SidebarBox title="Scripture Referenced in the Novel">
@@ -339,14 +351,13 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 11 — GEOGRAPHY AND TRAVEL */}
       {/* ======================================================= */}
+      <PageBreak />
       <ChapterBanner chapter="Unit 11" title="Geography — Tracing the Journey" />
 
       <ShortAnswer question="1. List, in order, the major locations where the story takes place. Begin with New York and Brussels in Chapter 1." lines={4} />
       <ShortAnswer question="2. Why was Bassingbourn, England chosen as the base for the 91st Bomb Group? What geographic advantage did England provide for bombing missions into Europe?" />
-      <div className="no-break">
-        <ShortAnswer question="3. The Wegimont castle is described as having four towers, a moat, and a courtyard. It is located near Liège, Belgium. Look at a map — how far is Liège from the German border? Why was this significant during the Battle of the Bulge?" />
-        <MapBox label="Trace the journey of Eddie and Mary after their bailout: landing in Belgium → Roger's farm → Wegimont castle → road to Verviers → Verviers church → American lines at St. Vith" height="280px" />
-      </div>
+      <ShortAnswer question="3. The Wegimont castle is described as having four towers, a moat, and a courtyard. It is located near Liège, Belgium. Look at a map — how far is Liège from the German border? Why was this significant during the Battle of the Bulge?" />
+      <MapBox label="Trace the journey of Eddie and Mary after their bailout: landing in Belgium → Roger's farm → Wegimont castle → road to Verviers → Verviers church → American lines at St. Vith" height="280px" />
       <ShortAnswer question="4. What mountain range do the Comet Line escape routes use to cross from France into Spain? Why was it chosen as an escape route?" lines={2} />
 
       <SectionRule />
@@ -354,6 +365,8 @@ export default function WorkbookPage() {
       {/* ======================================================= */}
       {/* UNIT 12 — FINAL PROJECTS */}
       {/* ======================================================= */}
+      <PageBreak />
+      <PageBreak />
       <ChapterBanner chapter="Unit 12" title="Final Projects — Choose One" />
 
       <EssayBox

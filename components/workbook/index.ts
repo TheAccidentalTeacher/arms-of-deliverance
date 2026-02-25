@@ -15,3 +15,4 @@ export { default as AnswerKeyBlock } from "./AnswerKeyBlock";
 export { default as MapBox } from "./MapBox";
 export { default as CoverPage } from "./CoverPage";
 export { default as SectionRule } from "./SectionRule";
+export { default as PageBreak } from "./PageBreak";

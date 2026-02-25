@@ -1,5 +1,6 @@
 ﻿import CoverPage from "@/components/workbook/CoverPage";
 import WeekBanner from "@/components/workbook/WeekBanner";
+import PageBreak from "@/components/workbook/PageBreak";
 import DayCard from "@/components/workbook/DayCard";
 import ShortAnswer from "@/components/workbook/ShortAnswer";
 import EssayBox from "@/components/workbook/EssayBox";
@@ -126,6 +127,7 @@ export default function AvionicsPage() {
       {/* =========================================== */}
       {/* WEEK 2 — NAVIGATION: FINDING TRUE NORTH */}
       {/* =========================================== */}
+      <PageBreak />
       <WeekBanner
         week={2}
         title="Navigation — Finding True North"
@@ -219,6 +221,7 @@ export default function AvionicsPage() {
       {/* =========================================== */}
       {/* WEEK 3 — ENGINES AND PROPULSION */}
       {/* =========================================== */}
+      <PageBreak />
       <WeekBanner
         week={3}
         title="Engines and Propulsion — What Makes a 65,000-lb Warbird Fly"
@@ -307,6 +310,7 @@ export default function AvionicsPage() {
       {/* =========================================== */}
       {/* WEEK 4 — COMMUNICATIONS AND RADIO SYSTEMS */}
       {/* =========================================== */}
+      <PageBreak />
       <WeekBanner
         week={4}
         title="Radio — Communication Under Fire"
@@ -399,6 +403,7 @@ export default function AvionicsPage() {
       {/* =========================================== */}
       {/* WEEK 5 — WEATHER AND AEROMETEROLOGY */}
       {/* =========================================== */}
+      <PageBreak />
       <WeekBanner
         week={5}
         title="Weather — Flying Through the European Winter"
@@ -489,6 +494,7 @@ export default function AvionicsPage() {
       {/* =========================================== */}
       {/* WEEK 6 — AVIATION IN THE MODERN WORLD */}
       {/* =========================================== */}
+      <PageBreak />
       <WeekBanner
         week={6}
         title="Modern Aviation — From B-17 to Today"

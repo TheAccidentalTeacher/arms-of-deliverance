@@ -1,5 +1,6 @@
 ﻿import CoverPage from "@/components/workbook/CoverPage";
 import WeekBanner from "@/components/workbook/WeekBanner";
+import PageBreak from "@/components/workbook/PageBreak";
 import DayCard from "@/components/workbook/DayCard";
 import MemoryVerse from "@/components/workbook/MemoryVerse";
 import ShortAnswer from "@/components/workbook/ShortAnswer";
@@ -112,6 +113,7 @@ export default function BibleStudyPage() {
       {/* ============================================================ */}
       {/* WEEK 2: COURAGE */}
       {/* ============================================================ */}
+      <PageBreak />
       <WeekBanner
         week={2}
         title="Courage: Be Strong and of Good Courage"
@@ -201,6 +203,7 @@ export default function BibleStudyPage() {
       {/* ============================================================ */}
       {/* WEEK 3: SOVEREIGNTY OVER EVIL */}
       {/* ============================================================ */}
+      <PageBreak />
       <WeekBanner
         week={3}
         title="Sovereignty: God Meant It for Good"
@@ -291,6 +294,7 @@ export default function BibleStudyPage() {
       {/* ============================================================ */}
       {/* WEEK 4: SACRIFICE */}
       {/* ============================================================ */}
+      <PageBreak />
       <WeekBanner
         week={4}
         title="Sacrifice: Greater Love Hath No Man"
@@ -379,6 +383,7 @@ export default function BibleStudyPage() {
       {/* ============================================================ */}
       {/* WEEK 5: REDEMPTION */}
       {/* ============================================================ */}
+      <PageBreak />
       <WeekBanner
         week={5}
         title="Redemption: Saved by Grace"
@@ -471,6 +476,7 @@ export default function BibleStudyPage() {
       {/* ============================================================ */}
       {/* WEEK 6: PROVIDENCE */}
       {/* ============================================================ */}
+      <PageBreak />
       <WeekBanner
         week={6}
         title="Providence: All Things Work Together"

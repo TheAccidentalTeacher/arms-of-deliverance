@@ -555,8 +555,12 @@ button.print-btn:hover { background: var(--accent-light); }
   margin: 0 0 0.5rem;
 }
 
+/* ── Page Break ─────────────────────────────────────── */
+/* screen: invisible; print: forces a new page */
+.page-break { display: none; }
+
 /* ── No-break utility ─────────────────────────────── */
-.no-break { page-break-inside: avoid; }
+.no-break { page-break-inside: avoid; break-inside: avoid; }
 
 /* ── Lesson Text ──────────────────────────────────── */
 .lesson-text {
@@ -814,11 +818,27 @@ button.print-btn:hover { background: var(--accent-light); }
   .map-box-wrapper    { break-inside: avoid; page-break-inside: avoid; }
   .no-break           { break-inside: avoid; page-break-inside: avoid; }
 
-  /* Chapter/week banners stay glued to what follows */
-  .chapter-banner     { break-after: avoid; page-break-after: avoid; }
-  .week-banner        { break-after: avoid; page-break-after: avoid; }
+  /* ── Explicit page break (PageBreak component) ── */
+  .page-break {
+    display: block;
+    break-before: page;
+    page-break-before: always;
+    height: 0;
+  }
+
+  /* Banners stay glued to the first content below — no forced break */
+  .chapter-banner     { break-after: avoid; page-break-after: avoid;
+                        break-before: avoid; page-break-before: avoid; }
+  .week-banner        { break-after: avoid; page-break-after: avoid;
+                        break-before: avoid; page-break-before: avoid; }
   .chapter-banner + * { break-before: avoid; page-break-before: avoid; }
   .week-banner + *    { break-before: avoid; page-break-before: avoid; }
+
+  /* ── Cap map height in print so Q+map combos fit on a page ── */
+  .map-box {
+    min-height: 0 !important;
+    height: 140px !important;
+  }
 
   /* ── Tighten spacing in print so blocks fit better on pages ── */
   .short-answer-block {
